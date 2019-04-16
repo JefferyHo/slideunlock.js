@@ -70,6 +70,14 @@
         }).on("touchend", function (event) {
             me.handerOut();
         });
+        
+        // window resize
+        $(window).on('resize', function() {
+            if (me.isOk) {
+                me.elm.find("#label").css({"right": 0, "left": 'auto'});
+                me.sliderBg.css('width', '100%');
+            }
+        });
     };
 
     /**
